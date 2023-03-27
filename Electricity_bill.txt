@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main() {
+    float unit,final_amount,total;
+    printf("Enter total units: ");
+    scanf("%f",&unit);
+    if(unit<=200)
+    {
+        total=100+unit*0.80;
+
+    }
+    else if(unit>200 && unit<=300)
+    {
+        total=100+160+(unit-200)*0.90;
+
+    }
+    else if(unit>300)
+    {
+        total=100+160+90+(unit-300)*1.0;
+    }
+    printf("Total = %.2lf",total);
+    if(total>400)
+    {
+        final_amount=total+(total*0.15);
+        printf("\n Final amount if it exceeds Rs 400=%.2lf",final_amount);
+
+    }
+    return 0;
+}
